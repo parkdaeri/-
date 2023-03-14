@@ -19,7 +19,7 @@
         }
 
         .mytitle {
-            background-color: white;
+            background-color: green;
             color: whitesmoke;
             height: 180px;
             display: flex;
@@ -69,6 +69,7 @@
             padding: 20px 20px 20px 20px;
             box-shadow: 0px 0px 3px 0px grey;
         }
+
         .mybtn {
             margin-top: 15px;
             display: flex;
@@ -79,8 +80,21 @@
             justify-content: center;
             /* 좌우 가운데 정렬 */
         }
-        .mybtn > button {
+
+        .mybtn>button {
             margin-right: 10px;
+        }
+
+        .star {
+            display: flex;
+            flex-direction: row;
+            /* h1과 button을 열로 놓을지, 행으로 놓을지 */
+            align-items: center;
+            /* 위아래 가운데 정렬 */
+            justify-content: center;
+            /* 좌우 가운데 정렬 */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
     <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
@@ -95,6 +109,17 @@
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화 URL</label>
+        </div>
+        <div class="star">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>--- 선택하기 ---</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
         </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
