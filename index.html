@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            background-color: green;
+            color: whitesmoke;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            /* h1과 button을 열로 놓을지, 행으로 놓을지 */
+            align-items: center;
+            /* 위아래 가운데 정렬 */
+            justify-content: center;
+            /* 좌우 가운데 정렬 */
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mytitle>button {
+            background-color: transparent;
+            width: 250px;
+            height: 50px;
+            border: 1px solid aqua;
+            border-radius: 30px;
+            color: aqua
+        }
+
+        .mytitle>button:hover {
+            background-color: transparent;
+            width: 250px;
+            height: 50px;
+            border: 3px solid white;
+            border-radius: 30px;
+            color: white
+        }
+
+        .mytitle>h1 {
+            color: azure;
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .mycards {
+            width: 1200px;
+            margin: 20px auto 20px auto;
+        }
+
+        .mypost {
+            width: 500px;
+            margin: 20px auto 40px auto;
+            padding: 20px 20px 20px 20px;
+            box-shadow: 0px 0px 3px 0px grey;
+        }
+        .mybtn {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            /* h1과 button을 열로 놓을지, 행으로 놓을지 */
+            align-items: center;
+            /* 위아래 가운데 정렬 */
+            justify-content: center;
+            /* 좌우 가운데 정렬 */
+        }
+        .mybtn > button {
+            margin-right: 10px;
+        }
+    </style>
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>내 생애 최고의 영화들</h1>
+        <button>영화 기록하기</button>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">영화 URL</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">한 줄 평</label>
+        </div>
+        <div class="mybtn">
+            <button type="button" class="btn btn-info">기록하기</button>
+            <button type="button" class="btn btn-outline-secondary">닫기</button>
+        </div>
+    </div>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20220607_129/16545872892918GA4h_JPEG/movie_image.jpg?type=m203_290_2"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">헤어질 결심</h5>
+                        <p class="card-text">모든 것이 완벽했던 형사 '해준'은 한 남자의 변사 사건을 조사하던 중 만나게 된 사망자의 아내 '서래'에게 의심과 관심을 동시에
+                            느끼는데...</p>
+                        <p>⭐⭐⭐⭐</p>
+                        <p class="mycomment">마침내...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20170126_165/1485396001082SL5mI_JPEG/movie_image.jpg?type=m203_290_2"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">컨택트</h5>
+                        <p class="card-text">세계 각지 상공에 출현한 12개의 외계 비행 물체,
+                            웨버 대령은 언어학 전문가 루이스 뱅크스 박사와 과학자 이안 도넬리를 통해 외계 비행 물체(쉘) 접촉하기 시작한다.</p>
+                        <P>⭐⭐⭐⭐⭐</P>
+                        <p class="" mycomment">인생 영화를 꼽으라면 가장 먼저 떠오르는 영화</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg?type=m203_290_2"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">더 퍼스트 슬램덩크</h5>
+                        <p class="card-text">전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정, 멈추지 않는 도전</p>
+                        <P>⭐⭐⭐</P>
+                        <p class="" mycomment">만화도, 영화도 아니다. 스포츠다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://file.mk.co.kr/meet/neds/2023/01/image_readtop_2023_2900_16726249815299109.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">더글로리</h5>
+                        <p class="card-text">건축가를 꿈꾸던 18살 문동은은 학교 폭력의 피해자가 되고, 온 생을 걸어 치밀하게 복수를 준비한다.</p>
+                        <P>⭐⭐⭐⭐⭐</P>
+                        <p class="" mycomment">복수극, 그리고 피해자들의 연대</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
