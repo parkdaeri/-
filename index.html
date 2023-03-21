@@ -19,7 +19,7 @@
         }
 
         .mytitle {
-            background-color: green;
+            background-color: black;
             color: whitesmoke;
             height: 180px;
             display: flex;
@@ -97,15 +97,27 @@
             margin-bottom: 10px;
         }
     </style>
-    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                //console.log(data)
+                let temper = data['temp']
+                $('#do').empty()
+                let temp_html = `<span id="do">${temper}</span>`
+                $('#do').append(temp_html)
+            })
+        })
+    </script>
+    <title>스파르타코딩클럽 | jquery, Fetch 연습</title>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>내 생애 최고의 영화들</h1>
-        <button>영화 기록하기</button>
+        <div>현재 서울의 날씨 : <span id="do">20</span>도</div>
+        <button onclink="q1()">영화 기록하기</button>
     </div>
-    <div class="mypost">
+    <div class=" mypost">
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화 URL</label>
@@ -131,7 +143,7 @@
         </div>
     </div>
     <div class="mycards">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-2 row-cols-xl-4 g-4">
             <div class="col">
                 <div class="card h-100">
                     <img src="https://movie-phinf.pstatic.net/20220607_129/16545872892918GA4h_JPEG/movie_image.jpg?type=m203_290_2"
